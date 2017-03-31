@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <ProjectGuid>{E448967B-2120-460F-B61F-4B1701AC44C5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>F:\NT4\public\sdk\inc;F:\NT4\private\inc;F:\NT4\private\mvdm\inc;F:\NT4\private\windows\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_MBCS;_X86_;LFN;STRICT;FASTMOVE;LFNCLIPBOARD;W3;UNICODE;USELASTDOT;MEMDOUBLE;WINVER=0x0400;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <BrowseInformation>true</BrowseInformation>
+      <PrecompiledHeaderOutputFile>.\Debug\winfile.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <CallingConvention>StdCall</CallingConvention>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\winfile.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <AdditionalIncludeDirectories>F:\NT4\public\sdk\inc;F:\NT4\private\inc;F:\NT4\private\mvdm\inc;F:\NT4\private\windows\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\winfile.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Debug\winfile.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;comctl32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /FORCE:MULTIPLE</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <AdditionalIncludeDirectories>c:\nt4\public\sdk\inc;c:\nt4\private\inc;C:\nt4\private\mvdm\inc;C:\nt4\private\windows\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_MBCS;_X86_;LFN;STRICT;FASTMOVE;LFNCLIPBOARD;W3;UNICODE;USELASTDOT;MEMDOUBLE;WINVER=0x0400;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\winfile.pch</PrecompiledHeaderOutputFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+      <CallingConvention>StdCall</CallingConvention>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\winfile.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0407</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\winfile.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>.\Release\winfile.exe</OutputFile>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;ntdll.lib;comctl32.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> /FORCE:MULTIPLE</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dbg.c" />
+    <ClCompile Include="fontsel.c" />
+    <ClCompile Include="largeic.c" />
+    <ClCompile Include="lfn.c" />
+    <ClCompile Include="lfnmisc.c" />
+    <ClCompile Include="lstrfns.c" />
+    <ClCompile Include="numfmt.c" />
+    <ClCompile Include="psdocurd.c" />
+    <ClCompile Include="suggest.c" />
+    <ClCompile Include="tbar.c" />
+    <ClCompile Include="treectl.c" />
+    <ClCompile Include="utilnt.c" />
+    <ClCompile Include="wfassoc.c" />
+    <ClCompile Include="wfchgnot.c" />
+    <ClCompile Include="wfcomman.c" />
+    <ClCompile Include="wfcopy.c" />
+    <ClCompile Include="wfdir.c" />
+    <ClCompile Include="wfdirrd.c" />
+    <ClCompile Include="wfdirsrc.c" />
+    <ClCompile Include="wfdlgs.c" />
+    <ClCompile Include="wfdlgs2.c" />
+    <ClCompile Include="wfdlgs3.c" />
+    <ClCompile Include="wfdos.c" />
+    <ClCompile Include="wfdrives.c" />
+    <ClCompile Include="wfext.c" />
+    <ClCompile Include="wffile.c" />
+    <ClCompile Include="wfinfo.c" />
+    <ClCompile Include="wfinit.c" />
+    <ClCompile Include="wfmem.c" />
+    <ClCompile Include="wfprint.c" />
+    <ClCompile Include="wfsearch.c" />
+    <ClCompile Include="wftree.c" />
+    <ClCompile Include="wfutil.c" />
+    <ClCompile Include="winfile.c" />
+    <ClCompile Include="wnetcaps.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="res.rc">
+      <Culture Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">0x0407</Culture>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">c:\nt4\public\sdk\inc;c:\nt4\private\inc;C:\nt4\private\mvdm\inc;C:\nt4\private\windows\inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="C:\Program Files (x86)\Microsoft Visual Studio\VC98\Lib\NTDLL.LIB" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dbg.h" />
+    <ClInclude Include="dosfunc.h" />
+    <ClInclude Include="fontsel.h" />
+    <ClInclude Include="lfn.h" />
+    <ClInclude Include="lstrfns.h" />
+    <ClInclude Include="numfmt.h" />
+    <ClInclude Include="suggest.h" />
+    <ClInclude Include="treectl.h" />
+    <ClInclude Include="wfcopy.h" />
+    <ClInclude Include="wfdisk.h" />
+    <ClInclude Include="wfdlgs.h" />
+    <ClInclude Include="wfexti.h" />
+    <ClInclude Include="wfgwl.h" />
+    <ClInclude Include="wfhelp.h" />
+    <ClInclude Include="wfinfo.h" />
+    <ClInclude Include="wfmem.h" />
+    <ClInclude Include="winexp.h" />
+    <ClInclude Include="winfile.h" />
+    <ClInclude Include="wnetcaps.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="mcopy.cur" />
+    <CustomBuild Include="mmove.cur" />
+    <CustomBuild Include="scopy.cur" />
+    <CustomBuild Include="smove.cur" />
+    <CustomBuild Include="split.cur" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="wbbitmap.bmp" />
+    <Image Include="wfdir.ico" />
+    <Image Include="wftrdir.ico" />
+    <Image Include="wftree.ico" />
+    <Image Include="winfile.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
